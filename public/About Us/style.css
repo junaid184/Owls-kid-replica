@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    background: linear-gradient(to right, black, lightskyblue);
+    width: 100%;
+    background-color: black;
+    color: #ffffff;
+    height: 25px;
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y: 0;
+    display: flex;
+}
+.head ul{
+    display: flex;
+}
+.head li{
+    display: block;
+    margin: 0 25px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow:  20px 20px 20px rgb(0 0 0 / 68%);
+}
+.hamburger {
+    display: none;
+    position: relative;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 0rem;
+}
+
+.nav-link{
+    font-size: -1.4rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: lightskyblue;
+    border-bottom: 1px solid lightskyblue;
+}
+@media only screen and (max-width: 768px) {
+    .head li{
+        display: block;
+        margin: 0 10px;
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 0%;
+        bottom: 0%;
+        height: 700px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        height: 435px;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.about {
+    background-image: url(Images/kaleb-tapp-J59wWPn09BE-unsplash.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about .content{
+    max-width: 800px;
+    text-align: center;
+}
+.about .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(255, 0, 140);
+}
+.about .content p{
+    font-size: 25px;
+    font-weight: 3000;
+    color: rgb(255, 255, 255);
+}
